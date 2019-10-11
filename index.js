@@ -1,3 +1,8 @@
+import { stringify } from "querystring";
+
 class Formatter {
-  //add static methods here
+  static capitalize(str) {
+    return str.charAt(0).toUpperCase()
+  }
+
 }
