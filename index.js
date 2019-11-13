@@ -10,9 +10,6 @@ class Formatter {
     }
 
     static titleize(string) {
-        // return string.charAt(0).toUpperCase() + string.slice(1);
-        // return string.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
-        // return string.split('').charAt(0).toUpperCase() + string.slice(1);
 
         let except = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
         let arrayOfStrings = string.split(" ");
