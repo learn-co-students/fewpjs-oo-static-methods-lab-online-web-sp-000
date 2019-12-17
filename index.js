@@ -22,7 +22,7 @@ class Formatter {
       } else if (wordsArray.includes(word)){
         return word;
       } else {
-        return this.capitalize(word);
+        return this.capitalize(this.sanitize(word));
       }
     })
     // console.log(newArray)
