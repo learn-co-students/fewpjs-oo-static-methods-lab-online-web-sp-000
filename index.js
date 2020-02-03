@@ -11,7 +11,7 @@ class Formatter {
     let words = sentence.split(" ");
     return words.map((x, i) => {
       let articles = ["the", "a", "and", "for", "at", "by", "from", "an", "of", "but"]
-      if (i === 0 ||articles.indexOf(x) === -1){
+      if (i === 0 || articles.indexOf(x) === -1){
         return x[0].toUpperCase() + x.slice(1);
       } else{
         return x;
