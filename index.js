@@ -11,12 +11,13 @@ class Formatter {
 
   static titleize(string) {
     let array = string.split(' ')
+    let badWords = new Set(['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'])
     let newArray = []
     for(let x = 0; x < array.length; x++) {
       if(x == 0) {
         newArray.push(this.capitalize(array[x]))
       }
-      else if(array[x] == 'the' || array[x] == 'a' || array[x] == 'an' || array[x] == 'but' || array[x] == 'of' || array[x] == 'and' || array[x] == 'for' || array[x] == 'at' || array[x] == 'by' || array[x] == 'from') {
+      else if(badWords.has(array[x])) {
         newArray.push(array[x])
       }
       else {
