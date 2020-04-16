@@ -5,8 +5,7 @@ class Formatter {
     }
 
     static sanitize(str) {
-        str = (str.replace(/[^\w-' ]+/g, ''));
-        return str
+        return str.replace(/[^\w-' ]+/g, '')
     }
 
     static titleize(str) {
@@ -29,7 +28,6 @@ class Formatter {
                 splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1)
             }
         }
-        splitStr = splitStr.join(' ')
-        return(splitStr)
+        return splitStr.join(' ')
     }
 }
