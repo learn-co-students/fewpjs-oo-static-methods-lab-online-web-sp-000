@@ -24,9 +24,9 @@ class Formatter {
             ){
                 splitStr[i] = splitStr[i].toLowerCase()
             } else {
-                splitStr[0] = splitStr[0].charAt(0).toUpperCase() + splitStr[0].substring(1)
                 splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1)
             }
+            splitStr[0] = splitStr[0].charAt(0).toUpperCase() + splitStr[0].substring(1)
         }
         return splitStr.join(' ')
     }
