@@ -33,5 +33,3 @@ class Formatter {
     return returnStringArray.join(' ');
   }
 }
-
-Formatter.titleize('a tale of two cities');
