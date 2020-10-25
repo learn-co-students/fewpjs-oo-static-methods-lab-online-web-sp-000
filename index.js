@@ -22,10 +22,13 @@ class Formatter {
         if (untitleized.includes(w)){
           result.push(w)
         } else {
-          result.push(titleizeWord(w));
+          result.push(titleizeWord(w))
         }
     });
-    return result.join(" ");
+
+    const titleizedString = result.join(" ")
+
+    return titleizedString.charAt(0).toUpperCase() + titleizedString.slice(1)
 
   }
 
