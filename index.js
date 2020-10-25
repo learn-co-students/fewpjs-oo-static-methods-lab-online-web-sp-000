@@ -5,23 +5,28 @@ class Formatter {
   }
 
   static sanitize(givenString){
-    const sanitizedString = givenString.replace(/[^\w\s,'-]/gi, '')
+    const sanitizedString = givenString.replace(/[^\w\s,'-]/g, '')
     return sanitizedString
   }
 
   static titleize(givenString){
 
-    function titleize(givenString) {
-      if(!givenString.split) return givenString;
-      var _titleizeWord = function(string) {
-              return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-          },
-          result = [];
-      givenString.split(" ").forEach(function(w) {
-          result.push(_titleizeWord(w));
-      });
-      return result.join(" ");
-  }    
+    const untitleized = [ 'the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
+
+    function titleizeWord(word){
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    } 
+
+    const result = [];
+    givenString.split(" ").forEach(function(w) {
+        if (untitleized.includes(w)){
+          result.push(w)
+        } else {
+          result.push(titleizeWord(w));
+        }
+    });
+    return result.join(" ");
 
   }
+
 }
