@@ -50,7 +50,7 @@ your code in the `index.js` file. Let the tests guide you through the process.
 2.  Write a method `static sanitize` that takes in a string and removes all
     non-alphanumeric characters except for dashes, single quotes and spaces.
 3.  Write a method `static titleize` that takes in a string and capitalizes all
-    words in a sentence except the, a, an, but, of, and, for, at, by, and from; and
+    words in a sentence except ;the, a, an, but, of, and, for, at, by, and from and
     always capitalizes the first word.
 
 ## Conclusion
