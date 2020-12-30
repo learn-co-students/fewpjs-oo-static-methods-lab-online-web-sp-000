@@ -10,7 +10,6 @@ class Formatter {
 
   static titleize(string){
     return Formatter.capitalize(string.split(" ").map((e) => {
-      
       switch(e){
         case 'the':
           return e;
@@ -44,7 +43,6 @@ class Formatter {
           break;
         default: 
           return Formatter.capitalize(e);
-          console.log(e);
           break;
       }
     }).join(" "))
