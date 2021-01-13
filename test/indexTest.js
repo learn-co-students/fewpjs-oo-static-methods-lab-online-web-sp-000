@@ -42,4 +42,6 @@ describe( "Formatter", () => {
       expect( Formatter.titleize( "in the night kitchen" ) ).to.equal( "In the Night Kitchen" )
     } )
   } )
+
+
 } )
