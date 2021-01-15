@@ -13,15 +13,24 @@ class Formatter {
         // 1) is a static method
         // 2) capitalizes all words in a sentence except 'the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', and 'from'
         // 3) always capitalizes the first word
-        string
+        let titleizedString = string.split(" ").map(word => {
+            if (this.isNotExcepted(word) && word !== this.firstWordOf(string, word)) {
+                return word;
+            } else {
+                return this.capitalize(word);
+            }
+        });
+        return titleizedString.join(" ");
     }
 
-    _isNotExcepted(word) {
+    static isNotExcepted(word) {
         switch (word) {
             case 'the':
             case 'a':
             case 'an':
             case 'but':
+            case 'of':
+            case 'and':
             case 'for':
             case 'at':
             case 'by':
@@ -30,5 +39,9 @@ class Formatter {
             default:
                 return false;
         }
+    }
+
+    static firstWordOf(string, word) {
+        return string.slice(0, word.length)
     }
 }
