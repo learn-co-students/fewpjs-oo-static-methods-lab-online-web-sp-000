@@ -10,9 +10,6 @@ class Formatter {
     }
 
     static titleize(string) {
-        // 1) is a static method
-        // 2) capitalizes all words in a sentence except 'the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', and 'from'
-        // 3) always capitalizes the first word
         let titleizedString = string.split(" ").map(word => {
             if (this.isNotExcepted(word) && word !== this.firstWordOf(string, word)) {
                 return word;
