@@ -14,7 +14,7 @@ class Formatter {
     let exceptions = [ 'the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
 
     for (let i = 0; i < splitString.length; i++){ 
-      if (i == 0 ) { 
+      if (i === 0) { 
         array.push(this.capitalize(splitString[i]))
       } else { 
         if (exceptions.includes(splitString[i])) {
@@ -23,8 +23,8 @@ class Formatter {
           array.push(this.capitalize(splitString[i]))
         }
       } 
-      return array.join(" ");
     }
+    return array.join(" ");
   }
 }
 
