@@ -11,14 +11,11 @@ class Formatter {
   static titleize(str) {
     let arr = str.split(" "); 
     let arr2 = ["the","a","an","but","of","for","at","by","from", "and"];
-    let arr3 = [];
     for (let i = 0; i < arr.length; i++) {
           if (i === 0 || !arr2.includes(arr[i])) {
-            arr3.push(this.capitalize(arr[i]));
-          } else {
-            arr3.push(arr[i]);
-          }
+            arr[i] = this.capitalize(arr[i]);
+          } 
       }
-    return arr3.join(" ");
+    return arr.join(" ");
   }
 }
