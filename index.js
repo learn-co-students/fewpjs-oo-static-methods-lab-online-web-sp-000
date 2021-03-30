@@ -10,7 +10,7 @@ class Formatter {
     let doNot = ["the", "a", "an", "but", "of", "and", "for", "at", "by", "from"]
     return string.split(" ").map((word, index) => {
       if ((!doNot.includes(word)) || (index === 0)){
-        return word.charAt(0).toUpperCase() + word.slice(1)
+        return this.capitalize(word)
       }
       else {
         return word
