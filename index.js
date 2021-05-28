@@ -13,7 +13,7 @@ class Formatter {
     stringArr = string.split(" ")
     let exceptions = ["the", "a", "an", "but", "of", "and", "for", "at", "by", "from"]
     return stringArr.map((x, i) => {
-      return exceptions.includes(x) && i!=0 ? x : x.charAt(0).toUpperCase() + x.slice(1)
+      return exceptions.includes(x) && i!=0 ? x : this.capitalize(x)
     }).join(' ')
   }
 }
